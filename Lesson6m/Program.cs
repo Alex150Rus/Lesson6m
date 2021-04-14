@@ -6,7 +6,8 @@ namespace Lesson6m
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string str = "Hello World!";
+            Console.WriteLine(str.GetQtyOfCharsInString('п'));
         }
     }
 }
