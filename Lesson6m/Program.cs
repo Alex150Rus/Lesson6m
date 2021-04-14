@@ -19,6 +19,26 @@ namespace Lesson6m
 
             int qty2 = list.Where(i => i == 0).ToArray().Length;
             Console.WriteLine(qty2);
+
+            Task4();
+        }
+
+        private static void Task4()
+        {
+            
+
+            Dictionary<string, int> dict = new Dictionary<string, int>()
+            {
+                {"four",4 },
+                {"two",2 },
+                { "one",1 },
+                {"three",3 },
+            };
+            var d = dict.OrderBy(delegate(KeyValuePair<string,int> pair) { return pair.Value; });
+            foreach (var pair in d)
+            {
+                Console.WriteLine($"{pair.Key} - {pair.Value}");
+            }
         }
     }
 }
