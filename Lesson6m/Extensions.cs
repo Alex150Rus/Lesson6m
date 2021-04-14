@@ -10,16 +10,32 @@ namespace Lesson6m
             if (!self.Contains(value))
                 return 0;
             
-            Dictionary<char, int> dictionary = new Dictionary<char, int>(self.Length);
-            foreach (char item in self)
-            {
-                if (item.Equals(value) && dictionary.ContainsKey(value))
-                    dictionary[value]+= 1;
-                else if (item.Equals(value) && !dictionary.ContainsKey(value))
-                    dictionary[value] = 1;
-            }
-            
-            return dictionary[value];
+            int qty = 0;
+            foreach (var item in self)
+                if (item == value)
+                    qty++;
+            return qty;
         }
+
+        internal static int GetQtyOfInteger(this List<int> self, int value)
+        {
+            if (!self.Contains(value))
+                return 0;
+            
+            int qty = 0;
+            foreach (var item in self)
+                if (item == value)
+                    qty++;
+            return qty;
+        } 
+        
+        internal static int GetQtyOfElements<T>(this T self, ICollection<T> value)
+        {
+            int qty = 0;
+            foreach (var item in value)
+                if (item.Equals(self))
+                    qty++;
+            return qty;
+        } 
     }
 }
