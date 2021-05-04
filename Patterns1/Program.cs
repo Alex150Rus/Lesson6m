@@ -31,7 +31,11 @@ namespace Patterns1
                     new Factorial().CalculateFactorial(userInput),
                     new FactorialResultRusText());
             
-            Console.WriteLine("Сума от 1 до N равна " + new SumFromOneToN().calculateSumFromOneToN(userInput));
+           
+            new DisplaySumFromOneToNViaConsole().DisplaySumFromOneToN(
+                new SumFromOneToN().calculateSumFromOneToN(userInput),
+                new SumFromOneToNRusText()
+            );
             
             new DisplayMaxOddNumberLessThanNTextViaConsole().DisplayMaxOddNumberLessThanN(
                 new CalculateMaxOddNumberLessThanN().CalcMaxOddNumberLessThanN(userInput),

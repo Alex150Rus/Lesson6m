@@ -9,7 +9,7 @@ namespace Patterns1.Text.Rus
 
         public MaxOddNumberLessThanNRusText()
         {
-            _maxOddNumber = new StringBuilder("максимальное четное число меньше N равно ");
+            _maxOddNumber = new StringBuilder("максимальное четное число меньше или равно N: ");
         }
     }
 }

@@ -1,9 +1,10 @@
 using System.Text;
+using Patterns1.Text;
 
 namespace Patterns1.Display
 {
     internal interface IDisplaySumFromOneToN
     {
-        void DisplaySumFromOneToN(int n, int sum, StringBuilder displayString);
+        void DisplaySumFromOneToN(int sum, ISumFromOneToNText displayString);
     }
 }
