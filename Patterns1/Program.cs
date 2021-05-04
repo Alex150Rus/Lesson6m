@@ -41,7 +41,6 @@ namespace Patterns1
                 new CalculateMaxOddNumberLessThanN().CalcMaxOddNumberLessThanN(userInput),
                 new MaxOddNumberLessThanNRusText());
             
-            Console.ReadLine();
         }
     }
 }
