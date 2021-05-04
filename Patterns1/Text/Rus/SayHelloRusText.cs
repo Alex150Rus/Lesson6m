@@ -7,9 +7,10 @@ namespace Patterns1.Text.Rus
         private StringBuilder _userGreeting;
         public StringBuilder UserGreeting => _userGreeting;
 
-        SayHelloRusText()
+        public SayHelloRusText()
         {
-            _userGreeting = new StringBuilder("Здравствуйте вас приветствует математическая программа");
+            _userGreeting = new StringBuilder(
+                "Здравствуйте вас приветствует математическая программа\nпажалуйста введите число.");
         }
     }
 }

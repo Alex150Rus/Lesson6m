@@ -1,4 +1,6 @@
 ﻿using System;
+using Patterns1.Display;
+using Patterns1.Text.Rus;
 
 namespace Patterns1
 {
@@ -6,8 +8,9 @@ namespace Patterns1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Здравствуйте вас приветствует математическая программа");
-            Console.WriteLine("пажалуйста введите число. ");
+            var sayHelloRusText = new SayHelloRusText();
+            var sayHelloViaConsole = new SayHelloViaConsole(sayHelloRusText);
+            sayHelloViaConsole.SayHelloToUser();
 
             String S = Console.ReadLine();
 
