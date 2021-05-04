@@ -1,6 +1,6 @@
 namespace Patterns1.Calculation
 {
-    internal class Factorial : ICalculateFactorial
+    internal sealed class Factorial : ICalculateFactorial
     {
         public int CalculateFactorial(int n)
         {

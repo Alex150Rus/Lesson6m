@@ -24,22 +24,13 @@ namespace Patterns1
             {
                 if (e.Message == "q") return;
             }
-           
+
             int M = inputRepository.UserInput;
-            int c2 = 0;
-            int c3 = 0;
-            for (int i = 1; i <= M; i++)
-            {
-                c2 = c2 + i;
-                if (i%2 == 0)
-                {
-                    c3 = i;
-                }
-            }
-            Console.WriteLine("Факториал равет " + new Factorial().CalculateFactorial(inputRepository.UserInput)); 
-            Console.WriteLine("Сума от 1 до N равна " + c2);
             
-            Console.WriteLine("максимальное четное число меньше N равно" + c3);
+            Console.WriteLine("Факториал равет " + new Factorial().CalculateFactorial(inputRepository.UserInput)); 
+            Console.WriteLine("Сума от 1 до N равна " + new SumFromOneToN().calculateSumFromOneToN(inputRepository.UserInput));
+            
+            Console.WriteLine("максимальное четное число меньше N равно" + new CalculateMaxOddNumberLessThanN().CalcMaxOddNumberLessThanN(inputRepository.UserInput));
             Console.ReadLine();
         }
     }
