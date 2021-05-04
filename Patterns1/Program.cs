@@ -25,15 +25,18 @@ namespace Patterns1
                 if (e.Message == "q") return;
             }
 
-            int M = inputRepository.UserInput;
+            int userInput = inputRepository.UserInput;
             
             new DisplayFactorialResultViaConsole().DisplayFactorialResult(
-                    new Factorial().CalculateFactorial(inputRepository.UserInput),
+                    new Factorial().CalculateFactorial(userInput),
                     new FactorialResultRusText());
             
-            Console.WriteLine("Сума от 1 до N равна " + new SumFromOneToN().calculateSumFromOneToN(inputRepository.UserInput));
+            Console.WriteLine("Сума от 1 до N равна " + new SumFromOneToN().calculateSumFromOneToN(userInput));
             
-            Console.WriteLine("максимальное четное число меньше N равно" + new CalculateMaxOddNumberLessThanN().CalcMaxOddNumberLessThanN(inputRepository.UserInput));
+            new DisplayMaxOddNumberLessThanNTextViaConsole().DisplayMaxOddNumberLessThanN(
+                new CalculateMaxOddNumberLessThanN().CalcMaxOddNumberLessThanN(userInput),
+                new MaxOddNumberLessThanNRusText());
+            
             Console.ReadLine();
         }
     }
