@@ -27,7 +27,10 @@ namespace Patterns1
 
             int M = inputRepository.UserInput;
             
-            Console.WriteLine("Факториал равет " + new Factorial().CalculateFactorial(inputRepository.UserInput)); 
+            new DisplayFactorialResultViaConsole().DisplayFactorialResult(
+                    new Factorial().CalculateFactorial(inputRepository.UserInput),
+                    new FactorialResultRusText());
+            
             Console.WriteLine("Сума от 1 до N равна " + new SumFromOneToN().calculateSumFromOneToN(inputRepository.UserInput));
             
             Console.WriteLine("максимальное четное число меньше N равно" + new CalculateMaxOddNumberLessThanN().CalcMaxOddNumberLessThanN(inputRepository.UserInput));
